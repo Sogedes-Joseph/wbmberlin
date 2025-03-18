@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL-Parameter in Clipboard</title>
+    <title>GID in Clipboard</title>
     <script>
         function getParameterByName(name) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -11,7 +11,7 @@
         }
         
         function setTextboxValue() {
-            const paramValue = getParameterByName('text');
+            const paramValue = getParameterByName('gid');
             if (paramValue) {
                 const textbox = document.getElementById('textbox');
                 textbox.value = paramValue;
@@ -36,7 +36,10 @@
     </script>
 </head>
 <body>
-    <label for="textbox">Text-Parameter:</label>
+    <div>
+        <img class="logo" src="https://www.wbm.de/typo3conf/ext/sitepackage/Resources/Public/Images/wbm-logo.svg" alt="Logo der WBM Wohnungsbaugesellschaft Berlin-Mitte GmbH">
+    </div>
+    <label for="textbox">Geschäftspartner-ID:</label>
     <input type="text" id="textbox">
     <button onclick="copyFromTextbox()">In Zwischenablage kopieren</button>
 </body>
